@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balenciaga | Palm Archive</title>
+    <link rel="stylesheet" href="/style.css?v=30" />
+  </head>
+
+  <body>
+
+    <header class="topbar">
+      <button id="menuButton" class="menu-button" aria-label="Menu">☰</button>
+      <strong>PALM ARCHIVE</strong>
+      <a class="cart-link" href="/cart.html">
+        <img src="/images/cart.png" alt="Cart" />
+      </a>
+    </header>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <aside id="sideMenu" class="side-menu">
+      <div class="side-menu-header">
+        <strong>SHOP</strong>
+        <button id="closeMenu" aria-label="Close menu">×</button>
+      </div>
+    
+      <div class="side-menu-section">
+        <a href="/">ALL PRODUCTS</a>
+        <a href="/?q=men">MEN</a>
+        <a href="/?q=women">WOMEN</a>
+      </div>
+    </aside>
+
+
+    <section class="search">
+      <input id="searchInput" placeholder="WHAT ARE YOU LOOKING FOR?" autocomplete="off" />
+      <div id="suggestions"></div>
+    </section>
+
+    <nav>
+        <a href="/">HOME</a>
+        <a href="/BALENCIAGA.html">BALENCIAGA</a>
+        <a href="/BAPE.html">BAPE</a>
+        <a href="/LOUIS_VUITTON.html">LOUIS VUITTON</a>
+        <a href="/MAISON_MARGIELA.html">MAISON MARGIELA</a>
+        <a href="/BOTTEGA_VENETA.html">BOTTEGA VENETA</a>
+        <a href="/ACNE-STUDIO.html">ACNE STUDIO</a>
+        <a href="/PRADA.html">PRADA</a>
+        <a href="/MIUMIU.html">MIUMIU</a>
+      </nav>  
+
+    <main>
+      <section class="hero">
+        <img src="/images/balentheme.png" alt="Balenciaga theme" />
+      </section>
+
+      <section id="products" class="grid"></section>
+    </main>
+
+    <script>
+      const grid = document.querySelector("#products");
+
+      async function loadBalenciagaProducts() {
+        const response = await fetch("/api/products?q=Balenciaga");
+        const products = await response.json();
+
+        if (products.length === 0) {
+          grid.innerHTML = `
+          <div class="empty-message">
+              No Balenciaga products available right now.
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = products
+          .map(
+            (item) => `
+              <article>
+                <img src="${item.image}" alt="${item.name}">
+                <div>
+                  <small>${item.designer}</small>
+                  <h3>${item.name}</h3>
+                  <strong>$${Number(item.price).toLocaleString()}</strong>
+                  <button class="add-cart-btn" data-product='${JSON.stringify(item)}'>
+                  ADD TO BAG
+                </button>
+              </div>
+              </article>
+            `
+          )
+          .join("");
+      }
+
+      loadBalenciagaProducts();
+    </script>
+    <script src="/cart.js"></script>
+    <script src="/menu.js"></script>
+  </body>
+</html>

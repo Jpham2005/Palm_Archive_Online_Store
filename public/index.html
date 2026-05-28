@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palm Archive</title>
+    <link rel="stylesheet" href="/style.css?v=31" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button id="menuButton" class="menu-button" aria-label="Menu">☰</button>
+      <strong>PALM ARCHIVE</strong>
+      <a class="cart-link" href="/cart.html">
+        <img src="/images/cart.png" alt="Cart" />
+      </a>
+    </header>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <aside id="sideMenu" class="side-menu">
+      <div class="side-menu-header">
+        <strong>SHOP</strong>
+        <button id="closeMenu" aria-label="Close menu">×</button>
+      </div>
+    
+      <div class="side-menu-section">
+        <a href="/">ALL PRODUCTS</a>
+        <a href="/?q=men">MEN</a>
+        <a href="/?q=women">WOMEN</a>
+      </div>
+    </aside>
+
+
+    <section class="search">
+      <input id="searchInput" placeholder="WHAT ARE YOU LOOKING FOR?" autocomplete="off" />
+      <div id="suggestions"></div>
+    </section>
+
+    <nav>
+      <a href="/BALENCIAGA.html">BALENCIAGA</a>
+      <a href="/BAPE.html">BAPE</a>
+      <a href="/LOUIS_VUITTON.html">LOUIS VUITTON</a>
+      <a href="/MAISON_MARGIELA.html">MAISON MARGIELA</a>
+      <a href="/BOTTEGA_VENETA.html">BOTTEGA VENETA</a>
+      <a href="/ACNE-STUDIO.html">ACNE STUDIO</a>
+      <a href="/PRADA.html">PRADA</a>
+      <a href="/MIUMIU.html">MIUMIU</a>
+    </nav>
+
+    <main>
+      
+      <section class="hero">
+        <img src="/images/theme(1).png" alt="Palm Archive theme(1)" />
+        <div>
+          <p>WINTER 2026 DROP</p>
+          <h1>DESIGNER ARCHIVE</h1>
+        </div>
+      </section>
+
+      <section class="profile">
+        <img class="profile-logo" src="/images/logo.png?v=2" alt="Palm Archive logo" />        <div>
+          <h2>Palm Archive</h2>
+          <p>PALM ARCHIVE ©
+            / LUXURY DEALS DAILY PAGE
+            BASE IN TORONTO GTA </p>
+        </div>
+      </section>
+
+      <section id="products" class="grid"></section>
+    </main>
+
+    <button id="chatButton" class="chat-button">AI</button>
+    <aside id="chat" class="chat hidden">
+      <header>
+        <strong>Palm Archive Product Finder Chat</strong>
+        <button id="closeChat">×</button>
+      </header>
+      <div id="messages" class="messages">
+        <p class="bot">How Can Palm Archive Help.</p>
+      </div>
+      <form id="chatForm">
+        <input id="chatInput" placeholder="What are you thinking?" />
+        <button>Send</button>
+      </form>
+    </aside>
+
+    <script src="/app.js?v=2"></script>
+    <script src="/cart.js"></script>
+    <script src="/menu.js"></script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Palm Archive</title>
+    <link rel="stylesheet" href="/style.css?v=30" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <button id="menuButton" class="menu-button" aria-label="Menu">☰</button>
+      <strong>PALM ARCHIVE</strong>
+      <a class="cart-link" href="/cart.html">
+        <img src="/images/cart.png" alt="Cart" />
+      </a>
+    </header>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <aside id="sideMenu" class="side-menu">
+      <div class="side-menu-header">
+        <strong>SHOP</strong>
+        <button id="closeMenu" aria-label="Close menu">×</button>
+      </div>
+    
+      <div class="side-menu-section">
+        <a href="/">ALL PRODUCTS</a>
+        <a href="/?q=men">MEN</a>
+        <a href="/?q=women">WOMEN</a>
+      </div>
+    </aside>
+    <nav>
+      <a href="/">HOME</a>
+      <a href="/BALENCIAGA.html">BALENCIAGA</a>
+      <a href="/BAPE.html">BAPE</a>
+      <a href="/LOUIS_VUITTON.html">LOUIS VUITTON</a>
+      <a href="/MAISON_MARGIELA.html">MAISON MARGIELA</a>
+      <a href="/BOTTEGA_VENETA.html">BOTTEGA VENETA</a>
+      <a href="/ACNE-STUDIO.html">ACNE STUDIO</a>
+      <a href="/PRADA.html">PRADA</a>
+      <a href="/MIUMIU.html">MIUMIU</a>
+    </nav>
+
+    <main>
+      <section class="cart-minimal">
+        <p class="cart-label">SHOPPING BAG</p>
+        <h1>Your bag</h1>
+    
+        <p id="emptyCartMessage" class="cart-note">
+          Your bag is empty. Add a product first.
+        </p>
+    
+        <section id="cartItems" class="cart-items"></section>
+    
+        <div id="orderInfo" class="order-info hidden">
+          <p>
+            Send us a screenshot of your cart on Instagram to confirm size and availability.
+          </p>
+        </div>
+        
+          <a
+            class="continue-link"
+            href="https://www.instagram.com/palm.archive.ca/"
+            target="_blank"
+          >
+            MESSAGE US ON INSTAGRAM
+          </a>
+    
+        <br />
+    
+        <a class="continue-link" href="/">CONTINUE SHOPPING</a>
+      </section>
+    </main>
+    <script src="/cart.js"></script>
+    <script src="/menu.js"></script>
+  </body>
+</html>
