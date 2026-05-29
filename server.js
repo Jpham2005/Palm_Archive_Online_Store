@@ -133,7 +133,7 @@ const demoProducts = [
     "designer": "Louis Vuitton",
     "category": "Glasses",
     "price": 450,
-    "image": "/images/louis1.png",
+    "image": "/images/louis1.jpg",
     "tags": [
       "louis vuitton",
       "lv",
