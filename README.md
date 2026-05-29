@@ -15,7 +15,7 @@ Palm Archive is a luxury fashion archive storefront. The website lets users brow
 
 ## Tech Stack
 
-This project uses HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and Mongoose.
+This is Simplest Full-Stack project uses HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and Mongoose.
 
 ## How to Run
 
