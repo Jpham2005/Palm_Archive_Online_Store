@@ -1,5 +1,7 @@
 # Palm Archive Online Store
 
+Author: Minh Tuan Pham
+
 Palm Archive is a luxury fashion archive storefront. The website lets users browse designer products, search by brand or category, add items to a shopping bag, and message Palm Archive on Instagram to confirm size and availability.
 
 ## Main Features
